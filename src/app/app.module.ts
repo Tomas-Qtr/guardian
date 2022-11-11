@@ -10,6 +10,7 @@ import {AngularFireModule} from '@angular/fire/compat'
 import { environment } from 'src/environments/environment';
 import { LoginService } from './login.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireAuthModule
     
   ],
   providers: [LoginService],
